@@ -2,7 +2,6 @@ package com.example.farmatec
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
 import androidx.viewpager.widget.ViewPager
 import com.example.farmatec.Adapter.MyFragmentPageAdapter
 import com.example.farmatec.databinding.ActivityMainBinding

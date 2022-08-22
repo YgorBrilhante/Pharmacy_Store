@@ -8,6 +8,8 @@
         <entry key="..\:/workspace/Farmatec/app/src/main/res/layout/fragment_estetica.xml" value="0.1762917933130699" />
         <entry key="..\:/workspace/Farmatec/app/src/main/res/layout/fragment_main.xml" value="0.1762917933130699" />
         <entry key="..\:/workspace/Farmatec/app/src/main/res/layout/fragment_medicamentos.xml" value="0.14536340852130325" />
+        <entry key="..\:/workspace/Farmatec/app/src/main/res/layout/fragment_suplementos.xml" value="0.16296296296296298" />
+        <entry key="..\:/workspace/Farmatec/app/src/main/res/layout/product_item.xml" value="0.33" />
       </map>
     </option>
   </component>
@@ -20,7 +22,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.22" />
+        <option name="scale" value="0.1757852077001013" />
       </ProjectState>
     </option>
   </component>
