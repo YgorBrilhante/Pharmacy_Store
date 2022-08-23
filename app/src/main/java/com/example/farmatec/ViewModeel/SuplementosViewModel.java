@@ -29,7 +29,7 @@ public class SuplementosViewModel extends ViewModel {
 
     public void findSuplementos() {
         state.setValue(State.DOING);
-        Repository.getInstance().getRemoteApi().getSuplementos().enqueue(new Callback<List<Product>>() {
+        Repository.getInstance().getRemoteApi().getProduct().enqueue(new Callback<List<Product>>() {
             @Override
             public void onResponse(@NonNull Call<List<Product>> call, @NonNull Response<List<Product>> response) {
                 if (response.isSuccessful()) {
@@ -48,7 +48,7 @@ public class SuplementosViewModel extends ViewModel {
         });
     }
 
-    public LiveData<List<Product>> getSuplementos() {
+    public LiveData<List<Product>> getProduct() {
         return this.suplementos;
     }
 
