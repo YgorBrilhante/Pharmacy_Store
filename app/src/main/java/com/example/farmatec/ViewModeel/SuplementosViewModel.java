@@ -1,6 +1,7 @@
 package com.example.farmatec.ViewModeel;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -18,6 +19,7 @@ public class SuplementosViewModel extends ViewModel {
     public enum State {
         DOING, DONE, ERROR;
     }
+
     private final MutableLiveData<List<Product>> suplementos = new MutableLiveData<>();
     private final MutableLiveData<State> state = new MutableLiveData<>();
 
@@ -27,7 +29,7 @@ public class SuplementosViewModel extends ViewModel {
 
     public void findSuplementos() {
         state.setValue(State.DOING);
-        Repository.getInstance().getRemoteApi().getProduct().enqueue(new Callback<List<Product>>() {
+        Repository.getInstance().getRemoteApi().getSuplementos().enqueue(new Callback<List<Product>>() {
             @Override
             public void onResponse(@NonNull Call<List<Product>> call, @NonNull Response<List<Product>> response) {
                 if (response.isSuccessful()) {
@@ -44,5 +46,13 @@ public class SuplementosViewModel extends ViewModel {
                 state.setValue(State.ERROR);
             }
         });
+    }
+
+    public LiveData<List<Product>> getSuplementos() {
+        return this.suplementos;
+    }
+
+    public LiveData<State> getState() {
+        return this.state;
     }
 }

@@ -9,6 +9,6 @@ import retrofit2.http.GET;
 
 public interface SuplementosApi {
         @GET("suplementos.json")
-        Call<List<Product>> getProduct();
+        Call<List<Product>> getSuplementos();
     }
 
